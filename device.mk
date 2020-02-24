@@ -18,6 +18,11 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/asus/X00P/X00P-vendor.mk)
 
+# Utils
+ifneq ($(findstring aosp, $(TARGET_PRODUCT)),)
+$(call inherit-product, $(LOCAL_PATH)/utils.mk)
+endif
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
