@@ -31,6 +31,11 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_SOONG_NAMESPACES += \
     device/asus/X00P
 
+ifneq ($(findstring aosp, $(TARGET_PRODUCT)),)
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/msm8996
+endif
+
 # Screen density
 TARGET_SCREEN_HEIGHT := 1440
 TARGET_SCREEN_WIDTH := 720
