@@ -471,3 +471,5 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+PRODUCT_VENDOR_KERNEL_HEADERS := device/asus/X00P-kernel/89xx/kernel-headers
