@@ -1,7 +1,7 @@
 <manifest version="1.0" type="device" target-level="2">
     <hal format="hidl">
         <name>android.hardware.audio</name>
-        <transport>hwbinder</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>5.0</version>
         <interface>
             <name>IDevicesFactory</name>
@@ -10,7 +10,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
-        <transport>hwbinder</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>5.0</version>
         <interface>
             <name>IEffectsFactory</name>
@@ -226,7 +226,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
-        <transport>hwbinder</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>2.2</version>
         <interface>
             <name>ISoundTriggerHw</name>
